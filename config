@@ -18,5 +18,17 @@ docker run -it \
   -e POSTGRES_PASSWORD="root" \
   -e POSTGRES_DB="ny_taxi" \
   -v $(pwd)/ny_taxi_pg_data:/var/lib/postgresql/data \
-  -p 5432:5432
-  postgres:16 #an image name (1st argument for docker command)
+  -p 5432:5432 \
+  -d postgres:13 \
+  --network-name=pg-admin-database \
+  --name=pg-database
+
+docker network create pg-admin-database
+
+docker run -it \
+  -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
+  -e PGADMIN_DEFAULT_PASSWORD="root" \
+  -p 8080:80 \
+  -d dpage/pgadmin4 \
+  --network=pg-admin-database \
+  --name=pg_admin

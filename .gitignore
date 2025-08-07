@@ -2,6 +2,7 @@ idea/
 .idea/
 dbdata/
 ny_taxi_pg_data/
+end.sh
 
 
 # Byte-compiled / optimized / DLL files
