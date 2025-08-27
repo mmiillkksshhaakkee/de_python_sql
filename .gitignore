@@ -209,3 +209,20 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+/os
+/end.sh
+/output.parquet
+/pd
+/pq
+/zones.csv
+/pd
+/output.parquet
+/~venv_ny_taxi/
+/ny_taxi_pg_data/
+/os
+/dbdata/
+/end.sh
+/.venv/
+/pq
+/zones.csv
+/queries_pg.sql
